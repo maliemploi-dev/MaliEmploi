@@ -43,6 +43,22 @@ const offres = {
 const parametres = new URLSearchParams(window.location.search);
 const poste = parametres.get("poste");
 const offre = offres[poste];
+const boutonPostuler = document.getElementById("boutonPostuler");
+
+if (offre && boutonPostuler) {
+    const destinataire = "recrutement@example.com";
+    const sujet = encodeURIComponent("Candidature : " + offre.titre);
+    const corps = encodeURIComponent(
+        "Bonjour,\n\nJe souhaite postuler au poste de " +
+        offre.titre +
+        ".\n\nCordialement."
+    );
+
+    boutonPostuler.href =
+        "mailto:" + destinataire +
+        "?subject=" + sujet +
+        "&body=" + corps;
+}
 
 const messageErreur = document.getElementById("messageErreur");
 
