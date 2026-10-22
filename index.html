@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaliEmploi - Trouvez votre emploi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="entete">
+        <a href="index.html" class="logo">MaliEmploi</a>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#offres">Offres d'emploi</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <h1>Trouvez votre prochain emploi</h1>
+            <p>Découvrez des opportunités professionnelles au Mali.</p>
+
+            <div class="recherche">
+                <input
+                    type="text"
+                    id="recherchePoste"
+                    placeholder="Ex. : Comptable"
+                >
+
+                <input
+                    type="text"
+                    id="rechercheVille"
+                    placeholder="Ex. : Bamako"
+                >
+
+                <button id="boutonRecherche">Rechercher</button>
+            </div>
+
+            <p id="messageResultat" aria-live="polite">
+                Découvrez nos offres d'emploi.
+            </p>
+        </section>
+
+        <section id="offres" class="section-offres">
+            <h2>Nos offres d'emploi</h2>
+
+            <div class="liste-offres" id="listeOffres">
+
+                <article class="carte-offre"
+                    data-poste="comptable"
+                    data-ville="bamako">
+
+                    <h3>Comptable</h3>
+                    <p>Entreprise : Mali Services</p>
+                    <p>Ville : Bamako</p>
+                    <a href="details.html?poste=comptable">
+                        Voir les détails
+                    </a>
+                </article>
+
+                <article class="carte-offre"
+                    data-poste="développeur web junior"
+                    data-ville="bamako">
+
+                    <h3>Développeur web junior</h3>
+                    <p>Entreprise : Tech Mali</p>
+                    <p>Ville : Bamako</p>
+                    <a href="details.html?poste=developpeur">
+                        Voir les détails
+                    </a>
+                </article>
+
+                <article class="carte-offre"
+                    data-poste="assistant commercial"
+                    data-ville="ségou">
+
+                    <h3>Assistant commercial</h3>
+                    <p>Entreprise : Sahel Distribution</p>
+                    <p>Ville : Ségou</p>
+                    <a href="details.html?poste=assistant">
+                        Voir les détails
+                    </a>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 MaliEmploi — Projet d'apprentissage.</p>
+    </footer>
+
+</body>
+</html>

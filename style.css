@@ -1,0 +1,191 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f4f7f6;
+    line-height: 1.6;
+}
+
+.entete {
+    background-color: #087f63;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 20px;
+    background-color: #e0f2ec;
+}
+
+.hero h1 {
+    margin-top: 0;
+    color: #075d49;
+    font-size: 36px;
+}
+
+.recherche {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+input,
+button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+input {
+    border: 1px solid #bbb;
+    width: 220px;
+}
+
+button {
+    border: none;
+    background-color: #087f63;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #055d49;
+}
+
+#messageResultat {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.section-offres {
+    padding: 35px 7%;
+}
+
+.section-offres h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.liste-offres {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.carte-offre {
+    background-color: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #00000012;
+}
+
+.carte-offre h3 {
+    color: #087f63;
+    margin-top: 0;
+}
+
+.carte-offre a {
+    display: inline-block;
+    background-color: #087f63;
+    color: white;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.carte-offre a:hover {
+    background-color: #055d49;
+}
+
+.carte-offre.masquee {
+    display: none;
+}
+
+footer {
+    background-color: #173b32;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+/* Style de la page des détails */
+.page-details {
+    max-width: 800px;
+    margin: 35px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.page-details h1,
+.page-details h2 {
+    color: #087f63;
+}
+
+.page-details a {
+    color: #087f63;
+}
+
+@media (max-width: 750px) {
+    .entete {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .liste-offres {
+        grid-template-columns: 1fr;
+    }
+
+    input,
+    button {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .page-details {
+        margin: 20px 12px;
+    }
+}
